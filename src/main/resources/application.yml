@@ -3,12 +3,13 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:libdb;IGNORECASE=TRUE
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-    schema: classpath:schema.sql
-    data: classpath:data.sql
+    driver-class-name: ${DB_DRIVER}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    schema: classpath:schema_pg.sql
+    data: classpath:data_pg.sql
+    initialization-mode: always
 
   h2:
     console:
