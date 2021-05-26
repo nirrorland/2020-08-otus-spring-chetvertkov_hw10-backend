@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.ot</groupId>
-    <artifactId>hw-16-backend</artifactId>
+    <artifactId>hw-17-docker</artifactId>
     <version>1.0</version>
 
     <parent>
@@ -29,9 +29,15 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.200</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,6 +74,7 @@
     </dependencies>
 
     <build>
+        <finalName>JavaApp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
